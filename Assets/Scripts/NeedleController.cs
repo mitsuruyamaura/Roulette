@@ -23,6 +23,19 @@ public class NeedleController : MonoBehaviour
 
 
         if (collision.TryGetComponent(out lottery)) {
+
+            // C# 8.0 以降
+            txtlotteryResult.text = lottery.lotteryType switch {
+                Lottery.LotteryType.大吉 => "大吉",
+                Lottery.LotteryType.中吉 => "中吉",
+                Lottery.LotteryType.小吉 => "小吉",
+                Lottery.LotteryType.末吉 => "末吉",
+                Lottery.LotteryType.凶 => "凶",
+                Lottery.LotteryType.大凶 => "大凶",
+                _ => "凶"
+            };
+
+
             switch (lottery.lotteryType) {
                 case Lottery.LotteryType.大吉:
                     txtlotteryResult.text = "大吉";

@@ -19,7 +19,6 @@ public class LotteryResult : MonoBehaviour
         lotteryResultObj = GameObject.Find("LotteryResult");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
@@ -42,18 +41,19 @@ public class LotteryResult : MonoBehaviour
     private void SubmitLottery() {
 
         // eulerAngles を利用すると、0 ～ 360 の角度が取得できる。rotation を利用すると 0 ～ 1.0f, 1.0f ～ -1.0f になるので注意
+        // 逆回転(時計の反対周り)の場合にも対応している
         if (transform.eulerAngles.z >= 30 && transform.eulerAngles.z < 90) {
-            lotteryResultObj.GetComponent<UnityEngine.UI.Text>().text = "大吉";
+            lotteryResultObj.GetComponent<Text>().text = "大吉";
         } else if (transform.eulerAngles.z >= 90 && transform.eulerAngles.z < 150) {
-            lotteryResultObj.GetComponent<UnityEngine.UI.Text>().text = "大凶";
+            lotteryResultObj.GetComponent<Text>().text = "大凶";
         } else if (transform.eulerAngles.z >= 150 && transform.eulerAngles.z < 210) {
-            lotteryResultObj.GetComponent<UnityEngine.UI.Text>().text = "小吉";
+            lotteryResultObj.GetComponent<Text>().text = "小吉";
         } else if (transform.eulerAngles.z >= 210 && transform.eulerAngles.z < 270) {
-            lotteryResultObj.GetComponent<UnityEngine.UI.Text>().text = "末吉";
+            lotteryResultObj.GetComponent<Text>().text = "末吉";
         } else if (transform.eulerAngles.z >= 270 && transform.eulerAngles.z < 330) {
-            lotteryResultObj.GetComponent<UnityEngine.UI.Text>().text = "中吉";
+            lotteryResultObj.GetComponent<Text>().text = "中吉";
         } else {
-            lotteryResultObj.GetComponent<UnityEngine.UI.Text>().text = "凶";
+            lotteryResultObj.GetComponent<Text>().text = "凶";
         }
 
         // 再抽選のための準備
