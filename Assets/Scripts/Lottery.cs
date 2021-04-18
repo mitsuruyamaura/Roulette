@@ -13,7 +13,8 @@ public class Lottery : MonoBehaviour
         小吉,
         末吉,
         凶,
-        大凶
+        大凶,
+        Count
     }
 
     [Header("おみくじの種類の設定")]

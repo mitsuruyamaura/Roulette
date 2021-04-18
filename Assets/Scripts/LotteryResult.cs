@@ -40,6 +40,7 @@ public class LotteryResult : MonoBehaviour
     /// </summary>
     private void SubmitLottery() {
 
+        // 回転角度で判定する方式
         // eulerAngles を利用すると、0 ～ 360 の角度が取得できる。rotation を利用すると 0 ～ 1.0f, 1.0f ～ -1.0f になるので注意
         // 逆回転(時計の反対周り)の場合にも対応している
         if (transform.eulerAngles.z >= 30 && transform.eulerAngles.z < 90) {
