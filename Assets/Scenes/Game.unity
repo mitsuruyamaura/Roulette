@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: 776303609}
   - component: {fileID: 776303608}
   - component: {fileID: 776303607}
+  - component: {fileID: 776303610}
   m_Layer: 0
   m_Name: roulette
   m_TagString: Untagged
@@ -592,6 +593,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776303610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776303606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb641662880f9b47819f6511c745fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lotteryTime: 1
 --- !u!1 &1191423787
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +1006,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841624215}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1018,7 +1032,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841624215}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5602e0ef5460ca94ca6f4409ca9b7623, type: 3}
   m_Name: 
